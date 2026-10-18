@@ -22,7 +22,7 @@ Before running the script, please ensure that your system meets the following re
 
 
 ---
-Detecting Alerts in the network system by Suricata:
+Detecting Alerts in the network system with Suricata:
 ---
 
 
@@ -39,7 +39,7 @@ I went to the terminal & write it
 cd /etc/suricata
 ```
 
-Then, I checked the suricata.yaml & write the above command in the terminal to see the suricata.rules
+Then, I checked the suricata.yaml & wrote the above command in the terminal to see the suricata.rules
 
 ```bash
 cat suricata.yaml
@@ -55,11 +55,11 @@ cd /var/lib/suricata
 
 ![Image Description](Images/Screenshot_from_2026-06-18_23-52-03.png)
 
-c) I type the alert rules by using nano in local.rules
+c) I type the alert rules using nano in local.rules
 
 ![Image Description](Images/Screenshot_from_2026-06-18_23-52-48.png)
 
-Here, it is the rules in the local.rules
+Here are the rules in local.rules
 
 ```bash
 
@@ -74,13 +74,13 @@ d) Then, I checked if there were any errors in the rules that I wrote local.rule
 ```bash
 suricata -T -c /etc/suricata/suricata.yaml
 ```
-e) Then I restart the suricata & check its status
+e) Then I restarted Suricata and checked its status
 
 ```bash
 systemctl restart suricata && systemctl status suricata
 ```
 
-f) Then, I typed the above command in the terminal to see by which rules or signature suricata is trying to scan the network
+f) Then, I typed the above command in the terminal to see which rules or signatures Suricata is trying to scan the network
 
 ```bash
 grep -A 10 "rule-files" /etc/suricata/suricata.yaml
@@ -93,6 +93,6 @@ grep -A 10 "rule-files" /etc/suricata/suricata.yaml
 
 ![Image Description](Images/photo_2026-06-18_20-43-23.jpg)
 
-Here, we have to install the Wazuh server first. 
+Here is our very simple Intrusion Detection & Prevention System (IDPS) project with suricata.
 
 ---
