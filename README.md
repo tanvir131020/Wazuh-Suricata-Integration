@@ -1,9 +1,28 @@
+🚀 Automated SOC Components Setup Script
+---
+
+Overview
+
+---
+
+
+This script automates the setup of a comprehensive Network-based Intrusion Detection System (NIDS) and Host-based Intrusion Detection System (HIDS) on a single machine 
+
+System Requirements
+
+Before running the script, please ensure that your system meets the following requirements:
+
+* Ubuntu OS
+
+* * Minimum 6GB of RAM
+
+
 ---
 Detecting Alerts in the network system by Suricata:
 ---
 
 
-a) At first, I went to the terminal & write it 
+a) At first, I installed the the Wazuh server in . I went to the terminal & write it 
 
 ```bash
 cd /etc/suricata
@@ -63,8 +82,6 @@ grep -A 10 "rule-files" /etc/suricata/suricata.yaml
 
 ![Image Description](Images/photo_2026-06-18_20-43-23.jpg)
 
-![Image Description](Images/photo_2026-06-18_20-43-25.jpg)
-
-These are the screenshots of suricata
+Here, we have to install the Wazuh server first. 
 
 ---
